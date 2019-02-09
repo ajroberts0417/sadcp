@@ -203,27 +203,19 @@ pg_ctl status
 We currently deploy to Heroku. Install their CLI with `brew install heroku/brew/heroku`. Branches are deployed to Heroku by pushing to the corresponding `git` remote for staging or production. You can add each remote thusly:
 
 ```bash
-# 1. add the git remote for staging
-heroku git:remote -a culdesac-graphene-staging
-# 2. rename staging remote from heroku (default) to heroku-staging
-git remote rename heroku heroku-staging
-# 3. add the git remote for production
-heroku git:remote -a graphene-tutorial-1
-# 4. rename production remote from heroku (default) to heroku-production
-git remote rename heroku heroku-production
+# 1. add the git remote for sadcp
+heroku git:remote -a sadcp
 ```
 
-Now you can deploy to Heroku using the `deploy-staging` and `deploy-production` make targets. See examples below.
+Now you can deploy to Heroku using the `deploy` make target See examples below.
 
 ```bash
-# deploy your local master branch to staging
-make deploy-staging
-# deploy your local master branch to production
-make deploy-production
-# deploy another local branch to staging
-make deploy-staging REF=my-cool-branch
-# deploy a specific commit to staging by its SHA
-make deploy-staging REF=abc123def456abc123def456abc123def456
+# deploy your local master branch to heroku
+make deploy
+# deploy another local branch to heroku
+make deploy REF=my-cool-branch
+# deploy a specific commit to heroku by its SHA
+make deploy REF=abc123def456abc123def456abc123def456
 ```
 
 
