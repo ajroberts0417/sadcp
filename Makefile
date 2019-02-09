@@ -3,7 +3,7 @@ REF=master
 
 .PHONY: run
 run:
-	pipenv run ddtrace-run python3 manage.py runserver
+	pipenv run python manage.py runserver
 
 # remove artifacts from build and dev tools
 .PHONY: clean
@@ -24,12 +24,12 @@ mypy:
 # run all unit tests
 .PHONY: test-unit
 test-unit: clean
-	DJANGO_SETTINGS_MODULE=culdesac.settings_test pipenv run python3 -m pytest ./culdesac/tests/unit --cov-fail-under=92
+	DJANGO_SETTINGS_MODULE=sadcp.settings_test pipenv run python -m pytest ./sadcp/tests/unit --cov-fail-under=92
 
 # run all integration tests
 .PHONY: test-int
 test-int: clean
-	DJANGO_SETTINGS_MODULE=culdesac.settings_test pipenv run python3 -m pytest ./culdesac/tests/integration --cov-fail-under=93
+	DJANGO_SETTINGS_MODULE=sadcp.settings_test pipenv run python -m pytest ./sadcp/tests/integration --cov-fail-under=93
 
 # run all lint, type checks, unit and integration tests
 .PHONY: test
