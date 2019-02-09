@@ -61,5 +61,5 @@ checkout:
 # - deploy any other local branch with `make deploy REF={branchname}`
 # - deploy a specific commit with `make deploy REF={SHA}`
 .PHONY: deploy
-deploy-staging: checkout test
+deploy: checkout test
 	git push heroku $(REF):master
