@@ -6,7 +6,7 @@ A monolithic Django project for SADCP. May Charlie, Chingachgook, the Emer of Sm
 
 - New commits should always be proposed in a [Pull Request](https://help.github.com/articles/about-pull-requests/)
 - Every Pull Request requires at least one approval before merging
-- Python code should follow [PEP 8](https://www.python.org/dev/peps/pep-0008/) as closely as possible
+- This project uses [Black](https://github.com/python/black) for python style & formatting
 - Pull requests should clearly describe changes in dependencies
 
 ## Quickstart
@@ -225,28 +225,16 @@ make deploy REF=abc123def456abc123def456abc123def456
 
 `make test`
 
-**Run Lint, Type Checks, or Tests**
+**Run Black, Lint, Type Checks, or Tests**
 
-`make [lint | mypy | test-unit | test-int]`
+`make [black | lint | mypy | test-unit | test-int]`
 
-**Tail Logs from Staging**
+**Tail Logs from Heroku remote**
 
-`heroku logs --tail --remote heroku-staging`
+`heroku logs --tail --remote heroku`
 
 
 ## Further Reading
-
-**[Auth0 Django Quickstart](https://auth0.com/docs/quickstart/backend/django)**
-
-Step-by-step guide for authenticating with Auth0 with code snippets.
-
-**[Django -> Rails Cheat Sheet](https://medium.com/@yeraydiazdiaz/django-rails-cheat-sheet-50adf2441913)**
-
-For you Rails developers out there.
-
-**[Django + Graphene Tutorial](https://docs.graphene-python.org/projects/django/en/latest/tutorial-plain/)**
-
-This is the tutorial the repo was initially based on.
 
 **[Configuring Heroku for Django](https://devcenter.heroku.com/articles/django-app-configuration)**
 
