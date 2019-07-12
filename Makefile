@@ -16,6 +16,11 @@ clean:
 lint:
 	pipenv run flake8 .
 
+# run black
+.PHONY: black
+black:
+	pipenv run black .
+
 # run type checks
 .PHONY: mypy
 mypy:
@@ -24,7 +29,7 @@ mypy:
 # run all unit tests
 .PHONY: test-unit
 test-unit:
-	pipenv run python -m pytest ./sadcp/tests/unit --cov-fail-under=0
+	pipenv run python3 -m pytest ./sadcp/tests/unit --cov-fail-under=0
 
 # run all integration tests
 .PHONY: test-int
@@ -61,5 +66,5 @@ checkout:
 # - deploy any other local branch with `make deploy REF={branchname}`
 # - deploy a specific commit with `make deploy REF={SHA}`
 .PHONY: deploy
-deploy: checkout
+deploy: checkout test
 	git push heroku $(REF):master
