@@ -7,11 +7,17 @@ verify_ssl = true
 flake8 = "*"
 pytest = "*"
 mypy = "*"
+black = "*"
+flake8-black = "*"
 
 [packages]
 django = "*"
 django-heroku = "*"
 gunicorn = "*"
+flake8-bugbear = "*"
 
 [requires]
 python_version = "3.7"
+
+[pipenv]
+allow_prereleases = true
