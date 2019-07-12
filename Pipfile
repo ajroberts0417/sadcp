@@ -4,17 +4,19 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
-flake8 = "*"
-pytest = "*"
-mypy = "*"
 black = "*"
+flake8 = "*"
 flake8-black = "*"
+flake8-bugbear = "*"
+pytest = "*"
+pytest-cov = "*"
+pytest-mock = "*"
+mypy = "*"
 
 [packages]
 django = "*"
 django-heroku = "*"
 gunicorn = "*"
-flake8-bugbear = "*"
 
 [requires]
 python_version = "3.7"
