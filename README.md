@@ -7,7 +7,6 @@ A monolithic Django project for SADCP. May Charlie, Chingachgook, the Emer of Sm
 - New commits should always be proposed in a [Pull Request](https://help.github.com/articles/about-pull-requests/)
 - Every Pull Request requires at least one approval before merging
 - This project uses [Black](https://github.com/python/black) for python style & formatting
-- Pull requests should clearly describe changes in dependencies
 
 ## Quickstart
 
